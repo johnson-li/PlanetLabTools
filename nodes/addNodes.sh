@@ -5,6 +5,12 @@ source config.sh
 cookie=$cookie
 slice_id=$slice_id
 
+if [[ "$#" == '0' || "$1" == '-h' ]]
+then
+    echo 'usage: addNodes [id ...]'
+    exit 0
+fi
+
 data2=''
 while [[ $# > 0 ]]
 do
