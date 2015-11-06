@@ -14,8 +14,3 @@ Usage
 | addNodes.sh | add nodes according to their id|
 | removeNodes.sh | remove nodes according to their id|
 
-
-Notes
-==
-
-`config.sh` is missing for that it stores some sensitive data

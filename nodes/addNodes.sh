@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source ../config.sh
 
 ### data imported from config.sh
 cookie=$cookie
