@@ -13,7 +13,7 @@ slice_name=$slice_name
 
 if [[ "$#" == '0' || "$1" == '-h' ]]
 then
-    echo 'usage: planet-upload [path ...]'
+    echo 'usage: planet-deploy [path ...]'
     exit 0
 fi
 
@@ -23,7 +23,7 @@ shift
 while [[ $# > 0 ]]
 do
     url=$1
-    scp -rp $path $slice_name@$url:~/ > /dev/null
+    scp -rp $path $slice_name@$url:~/
     res=`ssh $slice_name@$url "$(basename $path)/init.sh"`
     if [[ "$res" == 'ok' ]] ; then
         echo "deploy to $url successfully"
